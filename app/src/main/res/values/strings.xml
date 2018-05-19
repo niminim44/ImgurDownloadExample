@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ImgurDownloadExample</string>
+    <string name="download_imgur_images">Download Imgur Images</string>
+    <string name="imgur_image">Imgur Image</string>
 </resources>
