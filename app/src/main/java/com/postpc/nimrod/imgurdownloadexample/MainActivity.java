@@ -39,11 +39,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     }
 
-    @OnClick(R.id.download_button)
-    public void onDownloadButtonClicked(){
-        presenter.handleDownloadClicked();
-    }
-
     @Override
     public void initRecyclerView(RecyclerView.Adapter adapter, int numOfColumnsInGrid) {
         recyclerView.setLayoutManager(new GridLayoutManager(this, numOfColumnsInGrid));
@@ -64,5 +59,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     protected void onDestroy() {
         presenter.destroy();
         super.onDestroy();
+    }
+
+    @OnClick(R.id.download_button)
+    public void onDownloadButtonClicked(){
+        presenter.handleDownloadClicked();
     }
 }

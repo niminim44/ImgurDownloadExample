@@ -14,7 +14,7 @@ import retrofit2.Response;
 
 class MainPresenter implements MainContract.Presenter {
 
-    private static final int NUM_OF_COLUMNS_IN_GRID = 3;
+    private static final int NUM_OF_COLUMNS_IN_GRID = 2;
     private MainContract.View view;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private ImagesAdapter adapter;
