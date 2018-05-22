@@ -12,7 +12,7 @@ import retrofit2.http.Path;
 public interface ImgurApi {
 
     @GET("album/{id}")
-    Single<Response<ImgurResponseModel>> getChapterUpdates(
+    Single<Response<ImgurResponseModel>> getImgurAlbum(
             @Header("Authorization") String authorization,
             @Path("id") String id);
 

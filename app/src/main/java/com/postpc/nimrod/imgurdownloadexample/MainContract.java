@@ -16,6 +16,8 @@ public interface MainContract {
         void setProgressBarVisibility(int visible);
 
         void hideButton();
+
+        void disableButton();
     }
 
     interface Presenter{

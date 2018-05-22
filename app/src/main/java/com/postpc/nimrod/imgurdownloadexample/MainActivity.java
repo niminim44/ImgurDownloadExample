@@ -56,6 +56,11 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     }
 
     @Override
+    public void disableButton() {
+        downloadButton.setEnabled(false);
+    }
+
+    @Override
     protected void onDestroy() {
         presenter.destroy();
         super.onDestroy();

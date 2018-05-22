@@ -45,8 +45,9 @@ class MainPresenter implements MainContract.Presenter {
 
     private void downloadImages() {
         view.setProgressBarVisibility(View.VISIBLE);
+        view.disableButton();
         compositeDisposable.add(RetrofitServiceClientImgur.getImgurApi()
-                .getChapterUpdates(ImgurConstants.CLIENT_ID, ImgurConstants.CATS_ALBUM_HASH_CODE)
+                .getImgurAlbum(ImgurConstants.CLIENT_ID, ImgurConstants.CATS_ALBUM_HASH_CODE)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doOnSuccess(this::showImages)
